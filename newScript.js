@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         // get random number between 0 and max
         function getRandomInt(max) {
-          return Math.floor(Math.random() * Math.floor(max));
+          return Math.floor(Math.random() * Math.floor(max+1));
         }
 
         // add a word for every word in original sentence
