@@ -14,11 +14,11 @@ function pokeTranslation() {
 
   for (var pokeSpeechInstance = 0; pokeSpeechInstance < pokeSpeech.length; pokeSpeechInstance++) {
     // Get the original speech
-    var origText = pokeSpeech[pokeSpeechInstance].textContent;
+    var origText = pokeSpeech[pokeSpeechInstance].textContent.trim();
 
-    // Break speech into sentences
     // Matches new sentences and punctuation, ignoring trailing space.
-    var re = /\s?(.*?[^\w\s'])\s?/ig;
+    // Break speech into sentences
+    var re = /\s?(.*?[^\w\s',])\s?/ig;
     var sentences = origText.match(re);
 
     // creating empty array that will equal to all sentences
@@ -30,7 +30,7 @@ function pokeTranslation() {
       // counting how many words per sentence
       var wordCount = sentence.split(' ').length;
       // finding the punctuation for the sentence
-      var punctuation = sentence.match(/[^\w\s']/);
+      var punctuation = sentence.match(/[^\w\s']$/);
 
 
 
@@ -90,9 +90,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 // Submitting the form
 function translatingTime() {
   var x = document.getElementById('inputty').value;
-  document.getElementById('post').innerHTML = `<div class="izzypost">
+  document.getElementById('post').innerHTML = `<pokespeech class="pokenamehere">
   ` + x + `
-  </div>`;
+  </pokespeech>`;
   pokeTranslation();
   onClickTranslate();
   var y = document.getElementById('post').innerHTML;

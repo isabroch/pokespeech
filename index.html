@@ -1,29 +1,27 @@
 <link rel="stylesheet" href="style.css">
 <script type="text/javascript">
   var izzyBitty = ['Mi', 'Mimi', 'Kyu', 'Mimikyu'];
-  var izzyPika = ['Pi', 'Pika', 'Chu', 'Pikapi', 'Pipi', 'Pikachu'];
+  var izzyPika = ['Pi', 'Pika', 'Chu', 'Pikapi', 'Pikachu'];
   var postPokemon = izzyPika;
 </script>
 <script src="pokeTranslate.js" type="text/javascript"></script>
 <script src="onClickTranslate.js" type="text/javascript"></script>
 
 <div class="wrapper">
-  <div>Text to translate</div>
-<div class="newWrapper">
-  <textarea name="Speech" rows="3" cols="80" id="inputty"></textarea>
-  <button type="button" name="Translate" onclick="translatingTime()">Translate?</button>
-</div>
+  <div>Speech to translate</div>
+  <div class="newWrapper">
+    <textarea name="Speech" rows="3" cols="80" id="inputty"></textarea>
+    <button type="button" name="Translate" onclick="translatingTime()">Translate?</button>
+  </div>
 
 
-  <!--  text i'll be inputting to the form -->
-  <!-- <div class="izzypost">
-    I am not saying something, I'm just a poor human being. <pokeSpeech class="bitty">I'm saying something! Try me!</pokeSpeech> said the pokemon. It shook its head. <pokeSpeech class="bitty">Must we fight?</pokeSpeech>
-  </div> -->
+  <div class="izzypost">
+    <div id="post">
 
-  <div id="post">
-    <div class="izzypost">
-      I am an example <pokeSpeech class="bitty">Is that a right of life when the young children of this country are being reared into a sphere which is more owned by 12 men than it is by 120000000 people?</pokeSpeech> said the pokemon. It waves. <pokeSpeech class="bitty">Do I support multiple lines?</pokeSpeech>
-      </div>
+      I am an example <pokeSpeech class="bitty">Is that a right of life when the young children of this country are being reared into a sphere which is more owned by 12 men than it is by 120000000 people?</pokeSpeech> said the pokemon. It waves.
+      <pokeSpeech class="bitty">Do I support multiple lines?</pokeSpeech>
+
+    </div>
   </div>
 
   <textarea name="Output" rows="8" cols="80" id="outputty"></textarea>
