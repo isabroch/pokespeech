@@ -7,14 +7,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
   for (var i = 0; i < pokeSpeech.length; i++) {
     // Get the original speech
     var origText = pokeSpeech[i].textContent;
-    // console.log(origText);
 
     // Break speech into sentences
     // Matches new sentences and punctuation, ignoring trailing space.
     var re = /\s?(.*?[^\w\s'])\s?/ig;
     var sentences = origText.match(re);
 
-// creating empty array that will equal to all sentences
+    // creating empty array that will equal to all sentences
     var pokefied = [];
 
     for (var a = 0; a < sentences.length; a++) {
@@ -27,20 +26,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
       // creating full pokefied sentence with words and punctuation
       var tranSentence = pokeTranslate() + punctuation;
 
-      // console.log(tranSentence);
-
       // translate text
       function pokeTranslate() {
         var result = [];
 
-        // get random number between 0 and max
+        // get random integer between 0 and max
         function getRandomInt(max) {
-          return Math.floor(Math.random() * Math.floor(max+1));
+          return Math.floor(Math.random() * Math.floor(max + 1));
         }
 
-        // add a word for every word in original sentence
-        for (var b = 0; b < wordCount / 1; b++) {
-          // first word capitalized, all others not - breaks with more than one sentence!!!
+        // get random number (with decimal) between 1 and max
+        function getRandomNumb(max) {
+          return Math.random() * max + 1;
+        }
+
+        // add a word for every other word in original sentence, randomizing frequency
+        for (var b = 0; b < wordCount / getRandomNumb(3); b++) {
+
+          // first word capitalized, all others not
           if (b == 0) {
             result.push(postPokemon[getRandomInt(wordCount)]);
           } else {
@@ -63,18 +66,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // So it's only done once
     pokeSpeech[i].classList.add('translated');
 
-    // Setting attributes for changing on event
+    // Setting attributes and storing both original text and pokefied text in them
+    // Allows for quick changing on event
     pokeSpeech[i].setAttribute("data-speech", origText);
     pokeSpeech[i].setAttribute("data-pokespeech", transText);
 
     // Setting default to pokespeech
     pokeSpeech[i].innerHTML = "";
     pokeSpeech[i].classList.add("poke");
-
-    // When clicking on the speech, switch over to translated version
-    pokeSpeech[i].addEventListener("click", function() {
-      this.classList.toggle("poke");
-      this.classList.toggle("eng");
-    });
   }
 });
