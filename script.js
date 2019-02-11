@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       // counting how many words per sentence
       var wordCount = sentence.split(' ').length;
       // finding the punctuation for the sentence
-      var punctuation = sentence.match(/[^\w\s]/);
+      var punctuation = sentence.match(/[^\w\s']/);
       // creating full pokefied sentence with words and punctuation
       var tranSentence = pokeTranslate() + punctuation;
 
