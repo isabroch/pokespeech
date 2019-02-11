@@ -1,0 +1,31 @@
+.izzypost {
+
+  pokespeech {
+    display: inline-block;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+
+    &.eng {
+      &::before {
+        display: inline-block;
+        content: "\"" attr(data-speech) "\"";
+      }
+    }
+
+    &.poke {
+      &::before {
+        display: inline-block;
+        content: "\"" attr(data-pokespeech) "\"";
+      }
+    }
+
+    &:not(.translated) {
+      font-size: 2em;
+    }
+
+    &.bitty {
+      color: #5532aa;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.izzypost pokespeech {
+  display: inline-block;
+  font-weight: bold;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.izzypost pokespeech.eng::before {
+  display: inline-block;
+  content: '"' attr(data-speech) '"';
+}
+
+.izzypost pokespeech.poke::before {
+  display: inline-block;
+  content: '"' attr(data-pokespeech) '"';
+}
+
+.izzypost pokespeech:not(.translated) {
+  font-size: 2em;
+}
+
+.izzypost pokespeech.bitty {
+  color: #5532aa;
+}
