@@ -1,12 +1,20 @@
-// Matches new sentences and punctuation, ignoring trailing space.
-// \s?([[:upper:]].*?[[:punct:]])
+// get random integer between 0 and max
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
 
-document.addEventListener("DOMContentLoaded", function(event) {
+// get random number (with decimal) between 1 and max
+function getRandomNumb(max) {
+  return Math.random() * max + 2;
+}
+
+// Running translate on whatever is input
+function pokeTranslation() {
   var pokeSpeech = document.querySelectorAll("pokespeech:not(.traslated)");
 
-  for (var i = 0; i < pokeSpeech.length; i++) {
+  for (var pokeSpeechInstance = 0; pokeSpeechInstance < pokeSpeech.length; pokeSpeechInstance++) {
     // Get the original speech
-    var origText = pokeSpeech[i].textContent;
+    var origText = pokeSpeech[pokeSpeechInstance].textContent;
 
     // Break speech into sentences
     // Matches new sentences and punctuation, ignoring trailing space.
@@ -16,44 +24,41 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // creating empty array that will equal to all sentences
     var pokefied = [];
 
-    for (var a = 0; a < sentences.length; a++) {
+    for (var sentenceIndex = 0; sentenceIndex < sentences.length; sentenceIndex++) {
       // trimming whitespace at start and end
-      var sentence = sentences[a].trim();
+      var sentence = sentences[sentenceIndex].trim();
       // counting how many words per sentence
       var wordCount = sentence.split(' ').length;
       // finding the punctuation for the sentence
       var punctuation = sentence.match(/[^\w\s']/);
-      // creating full pokefied sentence with words and punctuation
-      var tranSentence = pokeTranslate() + punctuation;
+
+
 
       // translate text
       function pokeTranslate() {
         var result = [];
 
-        // get random integer between 0 and max
-        function getRandomInt(max) {
-          return Math.floor(Math.random() * Math.floor(max + 1));
-        }
-
-        // get random number (with decimal) between 1 and max
-        function getRandomNumb(max) {
-          return Math.random() * max + 1;
-        }
-
         // add a word for every other word in original sentence, randomizing frequency
-        for (var b = 0; b < wordCount / getRandomNumb(3); b++) {
+        for (var wordIndex = 0; wordIndex < wordCount / getRandomNumb(10); wordIndex++) {
+
+            var whichWord = getRandomInt(postPokemon.length);
+            var randomPokeWord = postPokemon[whichWord];
 
           // first word capitalized, all others not
-          if (b == 0) {
-            result.push(postPokemon[getRandomInt(wordCount)]);
+          if (wordIndex == 0) {
+            result.push(randomPokeWord);
           } else {
-            result.push(postPokemon[getRandomInt(wordCount)].toLowerCase());
+            result.push(randomPokeWord.toLowerCase());
           }
         }
+
 
         // creating a string
         return result.join(" ");
       }
+
+      // creating full pokefied sentence with words and punctuation
+      var tranSentence = pokeTranslate() + punctuation;
 
       // add each finished sentence to the array
       pokefied.push(tranSentence);
@@ -64,15 +69,32 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
     // So it's only done once
-    pokeSpeech[i].classList.add('translated');
+    pokeSpeech[pokeSpeechInstance].classList.add('translated');
 
     // Setting attributes and storing both original text and pokefied text in them
     // Allows for quick changing on event
-    pokeSpeech[i].setAttribute("data-speech", origText);
-    pokeSpeech[i].setAttribute("data-pokespeech", transText);
+    pokeSpeech[pokeSpeechInstance].setAttribute("data-speech", origText);
+    pokeSpeech[pokeSpeechInstance].setAttribute("data-pokespeech", transText);
 
     // Setting default to pokespeech
-    pokeSpeech[i].innerHTML = "";
-    pokeSpeech[i].classList.add("poke");
+    pokeSpeech[pokeSpeechInstance].innerHTML = "";
+    pokeSpeech[pokeSpeechInstance].classList.add("poke");
   }
+};
+
+// For example query
+document.addEventListener("DOMContentLoaded", function(event) {
+  pokeTranslation();
 });
+
+// Submitting the form
+function translatingTime() {
+  var x = document.getElementById('inputty').value;
+  document.getElementById('post').innerHTML = `<div class="izzypost">
+  ` + x + `
+  </div>`;
+  pokeTranslation();
+  onClickTranslate();
+  var y = document.getElementById('post').innerHTML;
+  document.getElementById('outputty').value = y;
+};

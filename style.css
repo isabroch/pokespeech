@@ -1,17 +1,17 @@
 .izzypost pokespeech {
-  display: inline-block;
+  display: inline;
   font-weight: bold;
   font-style: italic;
   cursor: pointer;
 }
 
 .izzypost pokespeech.eng::before {
-  display: inline-block;
+  display: inline;
   content: '"' attr(data-speech) '"';
 }
 
 .izzypost pokespeech.poke::before {
-  display: inline-block;
+  display: inline;
   content: '"' attr(data-pokespeech) '"';
 }
 
@@ -21,4 +21,20 @@
 
 .izzypost pokespeech.bitty {
   color: #5532aa;
+}
+
+/* for app */
+
+#post {
+  max-width: 500px;
+  margin: 5em 0;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newWrapper {
+  display: flex;
 }
