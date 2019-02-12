@@ -33,12 +33,12 @@
 
 /* Listed People */
 
-speech .blake {
+.izzypost speech .blake {
   --personSpeaking: #6EA2C1;
 }
 
 /* Listed Pokemon */
 
-pokespeech .bitty {
+.izzypost pokespeech .bitty {
   --pokeSpeaking: #783a8c;
 }
