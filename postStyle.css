@@ -1,3 +1,9 @@
+.izzypost speech {
+  display: inline;
+  font-weight: bold;
+  color: var(--personSpeaking);
+}
+
 .izzypost pokespeech {
   display: inline;
   font-weight: bold;
@@ -18,6 +24,12 @@
 
 .izzypost pokespeech:not(.translated) {
   font-size: 2em;
+}
+
+/* Listed People */
+
+speech .blake {
+  --personSpeaking: #6EA2C1;
 }
 
 /* Listed Pokemon */
