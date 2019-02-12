@@ -1,0 +1,27 @@
+.izzypost pokespeech {
+  display: inline;
+  font-weight: bold;
+  font-style: italic;
+  cursor: pointer;
+  color: var(--pokeSpeaking);
+}
+
+.izzypost pokespeech.eng::before {
+  display: inline;
+  content: '"' attr(data-speech) '"';
+}
+
+.izzypost pokespeech.poke::before {
+  display: inline;
+  content: '"' attr(data-pokespeech) '"';
+}
+
+.izzypost pokespeech:not(.translated) {
+  font-size: 2em;
+}
+
+/* Listed Pokemon */
+
+pokespeech .bitty {
+  --pokeSpeaking: #783a8c;
+}
