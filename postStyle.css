@@ -6,7 +6,7 @@
 
 .izzypost speech::before, .izzypost speech::after {
   display: inline;
-  content: '"' attr(data-speech) '"';
+  content: '"';
 }
   
 .izzypost pokespeech {
