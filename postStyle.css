@@ -1,3 +1,4 @@
+/* General Styles */
 .izzypost speech {
   display: inline;
   font-weight: bold;
@@ -31,14 +32,43 @@
   font-size: 2em;
 }
 
-/* Listed People */
+/* Content Warning */
+.izzypost contentwarn {
+  display: block;
+  padding: 10px;
+  background: white;
+  box-sizing: border-box;
+  border: 5px solid #DF2040;
+  border-left: 0px;
+  padding-left: 100px;
+  position: relative;
+  color: #DF2040;
+  }
 
+.izzypost contentwarn::before {
+  background: #DF2040;
+  display: block;
+  text-align: center;
+  content: 'Warning';
+  color: white;
+  text-transform: uppercase;
+  width: 90px;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  font-weight: bolder;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Listed People */
 .izzypost speech.blake {
   --personSpeaking: #6EA2C1;
 }
 
 /* Listed Pokemon */
-
 .izzypost pokespeech.bitty {
   --pokeSpeaking: #783a8c;
 }
+
