@@ -5,9 +5,26 @@
   color: var(--personSpeaking);
 }
 
+.izzypost thought {
+  display: inline;
+  font-style: italic;
+  color: var(--personSpeaking);
+}
+
+.izzypost written {
+  display: inline;
+  font-family: monotype;
+  color: var(--personSpeaking);
+}
+
 .izzypost speech::before, .izzypost speech::after {
   display: inline;
   content: '"';
+}
+
+.izzypost speech::before, .izzypost speech::after {
+  display: inline;
+  content: ''';
 }
   
 .izzypost pokespeech {
@@ -63,7 +80,7 @@
 }
 
 /* Listed People */
-.izzypost speech.blake {
+.izzypost .blake {
   --personSpeaking: #88d7e8;
 }
 
