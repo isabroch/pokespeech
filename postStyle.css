@@ -78,14 +78,3 @@
   top: 0;
   left: 0;
 }
-
-/* Listed People */
-.izzypost .blake {
-  --personSpeaking: #88d7e8;
-}
-
-/* Listed Pokemon */
-.izzypost pokespeech.bitty {
-  --pokeSpeaking: #4656a8;
-}
-
