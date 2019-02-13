@@ -78,3 +78,7 @@
   top: 0;
   left: 0;
 }
+
+ .blake { --personSpeaking: #79bedd; }
+
+ .bitty { --pokeSpeaking: #4656a8; }
