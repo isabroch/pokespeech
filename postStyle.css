@@ -50,35 +50,29 @@
 }
 
 /* Content Warning */
-.izzypost contentwarn {
+.izzypost cw, .izzypost tw {
   display: block;
-  padding: 10px;
-  background: white;
-  box-sizing: border-box;
-  border: 5px solid #DF2040;
-  border-left: 0px;
-  padding-left: 100px;
-  position: relative;
-  color: #DF2040;
+  color: red;
+  font-style: italic;
   }
 
-.izzypost contentwarn::before {
-  background: #DF2040;
-  display: block;
-  text-align: center;
-  content: 'Warning';
-  color: white;
+.izzypost cw::before {
+  content: 'content warning:';
+  padding: 0 5px 0 0;
   text-transform: uppercase;
-  width: 90px;
-  padding: 10px 10px;
-  box-sizing: border-box;
-  font-weight: bolder;
-  height: 101%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  font-size: 0.9em;
 }
 
- .blake { --personSpeaking: #79bedd; }
+.izzypost tw::before {
+  content: 'content warning:';
+  padding: 0 5px 0 0;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
 
- .bitty { --pokeSpeaking: #4656a8; }
+/* Characters * /
+ .blake { --personSpeaking: #93745b; }
+   .bitty { --pokeSpeaking: #4656a8; }
+
+
+ .dani { --personSpeaking: #56cdea; }
