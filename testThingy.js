@@ -15,7 +15,7 @@ function pokemonOptionList() {
 
   for (var pokemonsInList = 0; pokemonsInList < pokemonList.length; pokemonsInList++) {
     pokeList[pokeList.length] = new Option(pokemonList[pokemonsInList][0], pokemonList[pokemonsInList][1]);
-})
+}
 }
   
 // -----
