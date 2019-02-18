@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 // onClick (button form)
 function translatingTime() {
   var x = document.getElementById('inputty').value;
-  document.getElementById('post').innerHTML = `<pokespeech class="pokenamehere">
+  document.getElementById('post').innerHTML = `<pokespeech class="`+ document.getElementById('pokeOptions').text.toLowerCase() +`">
   ` + x + `
   </pokespeech>`;
   var y = document.getElementById('pokeOptions').value;
