@@ -71,8 +71,11 @@
 }
 
 /* Characters */
- .blake { --personSpeaking: #93745b; }
-   .bitty { --pokeSpeaking: #4656a8; }
+.blake { --personSpeaking: #93745b; }
+  .bitty { --pokeSpeaking: #4656a8; }
 
 
- .dani { --personSpeaking: #56cdea; }
+.dani { --personSpeaking: #56cdea; }
+  .missy {--pokeSpeaking: #7299a8;}
+  .wally {--pokeSpeaking: #edb4b8;}
+.
