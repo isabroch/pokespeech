@@ -43,7 +43,7 @@ function translatingTime() {
   document.getElementById('post').innerHTML = `<pokespeech class="pokenamehere">
   ` + x + `
   </pokespeech>`;
-  var y = getElementById('pokeOptions').value;
+  var y = document.getElementById('pokeOptions').value;
   document.getElementByID('pokeSpeaky').innerHTML = pokeOptions;
 
   // getting syllables, trimming white space, and making into an array
