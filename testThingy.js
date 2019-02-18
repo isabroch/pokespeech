@@ -1,4 +1,3 @@
-function pokemonOptionList() {
   // all pokemon
     // Blake
     var Bitty = ["Bitty", "Mi, Mimi, Mimikyu, Kyu, Mikyu"];
@@ -6,8 +5,8 @@ function pokemonOptionList() {
     // Dani
     var Missy = ["Missy", "Misdreavus, Mis, Dreav, Dreavus, Misdrea, Vus"];
     var Wally = ["Wally", "Spritzee, Sprit, Zee, Spri, Spritz"];
-  
-    // All
+
+function pokemonOptionList() {
     var pokemonList = [];
     var pokeList = document.getElementById('pokeOptions');
     
