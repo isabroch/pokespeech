@@ -44,7 +44,7 @@ function translatingTime() {
   ` + x + `
   </pokespeech>`;
   var y = document.getElementById('pokeOptions').value;
-  document.getElementById('pokeSpeaky').innerHTML = pokeOptions;
+  document.getElementById('pokeSpeaky').value = y;
 
   // getting syllables, trimming white space, and making into an array
   var newPostPokemon = document.getElementById('pokeSpeaky').value.trim().split(', ');
@@ -52,8 +52,8 @@ function translatingTime() {
   pokeTranslation(newPostPokemon);
   onClickTranslate();
 
-  var y = document.getElementById('post').innerHTML;
-  document.getElementById('outputty').value = y;
+  var z = document.getElementById('post').innerHTML;
+  document.getElementById('outputty').value = z;
 };
 
 // <---------------------------------------------------------------------------------------------------->
