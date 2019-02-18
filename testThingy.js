@@ -1,12 +1,22 @@
-// all pokemon
-  // Blake
-  var Bitty = ["Bitty", ["Mi", "Mimi", "Mimikyu", "Kyu", "Mikyu"]]
-
-  // Dani
-  var Missy = ["Missy", ["Misdreavus", "Mis", "Dreav", "Dreavus", "Misdrea", "Vus"]]
-  var Wally = ["Wally", ["Spritzee", "Sprit", "Zee", "Spri", "Spritz"]]
+function pokemonOptionList() {
+  // all pokemon
+    // Blake
+    var Bitty = ["Bitty", "Mi, Mimi, Mimikyu, Kyu, Mikyu"];
   
+    // Dani
+    var Missy = ["Missy", "Misdreavus, Mis, Dreav, Dreavus, Misdrea, Vus"];
+    var Wally = ["Wally", "Spritzee, Sprit, Zee, Spri, Spritz"];
+  
+    // All
+    var pokemonList = [];
+    var pokeList = document.getElementById('pokeOptions');
+    
+  pokemonList.push(Bitty, Missy, Wally);
 
+  for (var pokemonsInList = 0; pokemonsInList < pokemonList.length; pokemonsInList++) {
+    pokeList[pokeList.length] = new Option(pokemonList[pokemonsInList][0], pokemonList[pokemonsInList][1]);
+})
+}
   
 // -----
 
@@ -23,8 +33,7 @@ function getRandomNumb(max) {
 
 // after html is loaded
 document.addEventListener("DOMContentLoaded", function(event) {
-  pokeTranslation(defaultPostPokemon);
-});
+  pokeTranslation(defaultPostPokemon);});
 
 // onClick (button form)
 function translatingTime() {
@@ -32,6 +41,8 @@ function translatingTime() {
   document.getElementById('post').innerHTML = `<pokespeech class="pokenamehere">
   ` + x + `
   </pokespeech>`;
+
+  pokemonOptionList();
 
   // getting syllables, trimming white space, and making into an array
   var newPostPokemon = document.getElementById('pokeSpeaky').value.trim().split(', ');
