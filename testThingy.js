@@ -1,3 +1,16 @@
+// all pokemon
+  // Blake
+  var Bitty = ["Bitty", ["Mi", "Mimi", "Mimikyu", "Kyu", "Mikyu"]]
+
+  // Dani
+  var Missy = ["Missy", ["Misdreavus", "Mis", "Dreav", "Dreavus", "Misdrea", "Vus"]]
+  var Wally = ["Wally", ["Spritzee", "Sprit", "Zee", "Spri", "Spritz"]]
+  
+
+  
+// -----
+
+
 // get random integer between 0 and max
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
