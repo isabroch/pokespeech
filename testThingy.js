@@ -33,7 +33,9 @@ function getRandomNumb(max) {
 
 // after html is loaded
 document.addEventListener("DOMContentLoaded", function(event) {
-  pokeTranslation(defaultPostPokemon);});
+  pokeTranslation(defaultPostPokemon);
+  pokemonOptionList();
+});
 
 // onClick (button form)
 function translatingTime() {
@@ -42,7 +44,6 @@ function translatingTime() {
   ` + x + `
   </pokespeech>`;
 
-  pokemonOptionList();
 
   // getting syllables, trimming white space, and making into an array
   var newPostPokemon = document.getElementById('pokeSpeaky').value.trim().split(', ');
