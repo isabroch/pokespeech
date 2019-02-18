@@ -33,7 +33,7 @@ function getRandomNumb(max) {
 
 // after html is loaded
 document.addEventListener("DOMContentLoaded", function(event) {
-  pokeTranslation(defaultPostPokemon);
+  pokeTranslation(Bitty);
   pokemonOptionList();
 });
 
