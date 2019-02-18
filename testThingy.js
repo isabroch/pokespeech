@@ -44,7 +44,7 @@ function translatingTime() {
   ` + x + `
   </pokespeech>`;
   var y = document.getElementById('pokeOptions').value;
-  document.getElementByID('pokeSpeaky').innerHTML = pokeOptions;
+  document.getElementById('pokeSpeaky').innerHTML = pokeOptions;
 
   // getting syllables, trimming white space, and making into an array
   var newPostPokemon = document.getElementById('pokeSpeaky').value.trim().split(', ');
