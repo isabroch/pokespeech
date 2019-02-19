@@ -2,19 +2,16 @@
 .izzypost speech {
   display: inline;
   font-weight: bold;
-  color: var(--personSpeaking);
 }
 
 .izzypost thought {
   display: inline;
   font-style: italic;
-  color: var(--personSpeaking);
 }
 
 .izzypost written {
   display: inline;
   font-family: monotype;
-  color: var(--personSpeaking);
 }
 
 .izzypost speech::before, .izzypost speech::after {
@@ -32,7 +29,6 @@
   font-weight: bold;
   font-style: italic;
   cursor: pointer;
-  color: var(--pokeSpeaking);
 }
 
 .izzypost pokespeech.eng::before {
@@ -71,11 +67,11 @@
 }
 
 /* Characters */
-.blake { --personSpeaking: #93745b; }
-  .bitty { --pokeSpeaking: #4656a8; }
+.blake { color: #93745b; }
+  .bitty { color: #4656a8; }
 
 
-.dani { --personSpeaking: #56cdea; }
-  .missy {--pokeSpeaking: #7299a8;}
-  .wally {--pokeSpeaking: #edb4b8;}
+.dani { color: #56cdea; }
+  .missy { color: #7299a8;}
+  .wally { color: #edb4b8;}
 .
