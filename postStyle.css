@@ -21,7 +21,7 @@
 
 .izzypost speech::before, .izzypost speech::after {
   display: inline;
-  content: ''';
+  content: "'";
 }
   
 .izzypost pokespeech {
