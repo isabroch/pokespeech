@@ -19,7 +19,7 @@
   content: '"';
 }
 
-.izzypost speech::before, .izzypost speech::after {
+.izzypost thought::before, .izzypost thought::after {
   display: inline;
   content: "'";
 }
