@@ -36,25 +36,11 @@
 }
 
 /* Content Warning */
-.izzypost cw, .izzypost tw {
+.izzypost cw {
   display: block;
   color: red;
   font-style: italic;
   }
-
-.izzypost cw::before {
-  content: 'content warning:';
-  padding: 0 5px 0 0;
-  text-transform: uppercase;
-  font-size: 0.9em;
-}
-
-.izzypost tw::before {
-  content: 'content warning:';
-  padding: 0 5px 0 0;
-  text-transform: uppercase;
-  font-size: 0.9em;
-}
 
 /* Characters */
 .blake { color: #ab855b; }
