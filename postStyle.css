@@ -13,16 +13,6 @@
   display: inline;
   font-family: monotype;
 }
-
-.izzypost speech::before, .izzypost speech::after {
-  display: inline;
-  content: '"';
-}
-
-.izzypost thought::before, .izzypost thought::after {
-  display: inline;
-  content: "'";
-}
   
 .izzypost pokespeech {
   display: inline;
@@ -67,11 +57,12 @@
 }
 
 /* Characters */
-.blake { color: #93745b; }
+.blake { color: #ab855b; }
   .bitty { color: #4656a8; }
 
 
 .dani { color: #56cdea; }
   .missy { color: #7299a8;}
   .wally { color: #edb4b8;}
-.
+
+.billy { color: #a4ca4d; }
