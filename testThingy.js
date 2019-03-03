@@ -37,13 +37,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
   pokemonOptionList();
 });
 
+// getting either preset or custom
+function customPoke() {
+  if (document.querySelector('#pokeOptions option:checked').value == "") {
+     return document.getElementById('pokeSpeaky').value;
+  } else {
+     return document.querySelector('#pokeOptions option:checked').value;
+  }
+}
+
 // onClick (button form)
 function translatingTime() {
   var x = document.getElementById('inputty').value;
   document.getElementById('post').innerHTML = `<pokespeech class="`+ document.querySelector('#pokeOptions option:checked').text.toLowerCase() +`">
   ` + x + `
   </pokespeech>`;
-  var y = document.getElementById('pokeOptions').value;
+  var y = customPoke();
   document.getElementById('pokeSpeaky').value = y;
 
   // getting syllables, trimming white space, and making into an array
