@@ -50,4 +50,5 @@
   padding: 15px;
   border: 1px solid black;
   border-bottom: none;
+  white-space: pre-wrap;
 }
