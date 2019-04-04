@@ -1,0 +1,63 @@
+/* General Styles */
+.izzypost {
+  white-space: pre-wrap;
+}
+ 
+.izzypost speech {
+  display: inline;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.izzypost thought {
+  display: inline;
+  font-style: italic;
+}
+
+.izzypost written {
+  display: inline;
+  font-family: monotype;
+}
+  
+.izzypost pokespeech {
+  display: inline;
+  font-weight: bold;
+  font-style: italic;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+}
+
+.izzypost pokespeech.eng::before {
+  display: inline;
+  content: '"' attr(data-speech) '"';
+}
+
+.izzypost pokespeech.poke::before {
+  display: inline;
+  content: '"' attr(data-pokespeech) '"';
+}
+
+.izzypost pokespeech:not(.translated) {
+  font-size: 2em;
+}
+
+/* Content Warning */
+.izzypost cw {
+  display: block;
+  color: red;
+  font-style: italic;
+  }
+
+/* Characters */
+.blake { color: #ab855b; }
+  .bitty { color: #4656a8; }
+
+
+.dani { color: #27abe0; }
+  .missy { color: #7299a8; }
+  .wally { color: #e0488d; }
+  .hazel { color: #a97946; }
+
+.billy { color: #6dae32; }
+  .lina { color: #b8b9e3;}
+  .amelia { color: #ecbb6c;}
